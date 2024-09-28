@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Inscripción a Materias</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#inscripcion">Inscripciones</a></li>
+            <li><a href="#perfil">Perfil del Alumno</a></li>
+            <li><a href="#cerrar">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <!-- Sección del Perfil del Alumno -->
+        <div id="perfil" class="perfil">
+            <h2>Perfil del Alumno</h2>
+            <img src="descarga2.png" alt="Avatar del Alumno" class="avatar">
+            <p><strong>Nombre:</strong> </p>
+            <p><strong>Carrera:</strong></p>
+            <p><strong>Año:</strong> </p>
+        </div>
+
+
+        <div class="container">
+            <h2><img src="1630567801062 (1).jpeg" alt="Logo" class="logo"> Inscripción a Materias</h2>
+        </div>
+
+        <form action="/inscripcion" method="POST">
+            <label for="nombre">Nombre y apellido del Alumno:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="nombre">DNI del Alumno:</label><br>
+            <input type="text" id="DNI" name="DNI" required><br><br>
+
+            <label for="carrera">Carrera:</label><br>
+            <div class="radio-group">
+                <input type="radio" id="analisis" name="carrera" value="TÉCNICO SUPERIOR EN ANÁLISIS FUNCIONAL DE SISTEMAS INFORMÁTICOS" required>
+                <img src="descarga.jpeg" alt="AF" class="carrera-icon">
+                <label for="analisis">TÉCNICO SUPERIOR EN ANÁLISIS FUNCIONAL DE SISTEMAS INFORMÁTICOS</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="desarrollo" name="carrera" value="TÉCNICO SUPERIOR EN DESARROLLO DE SOFTWARE">
+                <img src="descarga (2).jpeg" alt="DS" class="carrera-icon">
+                <label for="desarrollo">TÉCNICO SUPERIOR EN DESARROLLO DE SOFTWARE</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="infraestructura" name="carrera" value="TÉCNICO SUPERIOR EN INFRAESTRUCTURA DE TECNOLOGÍA DE LA INFORMACIÓN">
+                <img src="descarga (1).jpeg" alt="ITI" class="carrera-icon">
+                <label for="infraestructura">TÉCNICO SUPERIOR EN INFRAESTRUCTURA DE TECNOLOGÍA DE LA INFORMACIÓN</label>
+            </div>
+                <!-- Agrega más opciones según sea necesario -->
+            </select><br><br>
+                <label for="anio">Año:</label><br>
+            <select id="anio" name="anio" required>
+                <option value="">Seleccione el año de la carrera</option>
+                <option value="primer">Primer Año</option>
+                <option value="segundo">Segundo Año</option>
+                <option value="tercer">Tercer Año</option>
+            </select><br><br>
+            </select><br><br>
+            <label for="materias">Materias Disponibles:</label><br>
+            <select id="materias" name="materias[]" multiple required>>
+
+            <input type="submit" value="Inscribirse">
+        </form>
+    </div>
+</body>
+</html>
